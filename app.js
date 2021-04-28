@@ -21,11 +21,11 @@ while (initial !== 'quit' && initial !== 'q') {
         items.push(newItem);
         alert(`${newItem} has been added`);
     } else if (initial === 'delete') {
-        const deleteItem = prompt("Okay! What is the index of the item you want to delete?");
+        const index = prompt("Okay! What is the index of the item you want to delete?");
         console.log(items);
-        items.splice(deleteItem, 1);
+        const deleteItem = items.splice(index, 1);
         // let items = deleteItem;
-        alert(`${deleteItem} has been deleted`);
+        alert(`${deleteItem[0]} has been deleted`);
     }
 }
 alert("Okay, you've quit the app. Goodbye!");
